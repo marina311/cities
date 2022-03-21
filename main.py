@@ -2,6 +2,7 @@ from flask import Flask, request
 import logging
 import json
 import random
+import os
 
 app = Flask(__name__)
 
@@ -12,12 +13,9 @@ logging.basicConfig(level=logging.INFO)
 # которые мы записали в прошлом пункте.
 
 cities = {
-    'москва': ['1540737/daa6e420d33102bf6947',
-               '213044/7df73ae4cc715175059e'],
-    'нью-йорк': ['1652229/728d5c86707054d4745f',
-                 '1030494/aca7ed7acefde2606bdc'],
-    'париж': ["1652229/f77136c2364eb90a3ea8",
-              '3450494/aca7ed7acefde22341bdc']
+    'москва': ['1652229/5b84f1de9d6ed01f8c5c', '1652229/08349f2c2042b29290ea'],
+    'нью-йорк': ['1030494/72c2d0a088ad321b77c5', '213044/23ec28d4a97ecb4501be'],
+    'париж': ["1030494/f3f7e337e46a6f77780f", '1652229/2e30078dd8e0ef512319']
 }
 
 # создаем словарь, где для каждого пользователя
@@ -117,6 +115,7 @@ def get_first_name(req):
             # то возвращаем ее значение.
             # Во всех остальных случаях возвращаем None.
             return entity['value'].get('first_name', None)
+
 
 
 if __name__ == '__main__':
