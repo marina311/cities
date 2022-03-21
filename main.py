@@ -1,5 +1,5 @@
 from flask import Flask, request
-import logging2
+import logging
 import json
 import random
 import os
@@ -9,9 +9,9 @@ app = Flask(__name__)
 logging.basicConfig(level=logging.INFO)
 
 cities = {
-    'москва': ['1030494/748c90d71fc186c71016', '1030494/e85de4d9840da84a2d8c'],
-    'нью-йорк': ['1533899/150428e6210990c5c79e', '1030494/64d575f7b46009ea707b'],
-    'париж': ["1652229/0f7589138df860e6fc73", '1652229/2e30078dd8e0ef512319']
+    'москва': ['1652229/5b84f1de9d6ed01f8c5c', '1652229/08349f2c2042b29290ea'],
+    'нью-йорк': ['1030494/72c2d0a088ad321b77c5', '213044/23ec28d4a97ecb4501be'],
+    'париж': ["1030494/f3f7e337e46a6f77780f", '1652229/2e30078dd8e0ef512319']
 }
 
 sessionStorage = {}
