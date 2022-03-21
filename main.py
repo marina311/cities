@@ -3,6 +3,7 @@ import logging
 import json
 # импортируем функции из нашего второго файла geo
 from geo import get_country, get_distance, get_coordinates
+import os
 
 app = Flask(__name__)
 
